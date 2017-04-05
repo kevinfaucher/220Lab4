@@ -71,7 +71,7 @@ void SLL::priorityInsert(string s, int p) {
 }
 
 void SLL::push(SNode *n) {
-    //pushes n onto the end of the stack
+  
     last->next = n;
     n->next = NULL;
     last = n;
