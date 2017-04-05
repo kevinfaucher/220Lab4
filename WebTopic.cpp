@@ -82,9 +82,7 @@ string WebTopic::stripSpace(string s) {
 }
 
 void WebTopic::parseString(string line) {
-    //takes the line and breaks it down into words (separated by space), calls
-    //stripSpace to get rid of anything not alphanumeric, and then inserts each
-    //word into the list along with its priority
+
     int i = 0;
     string indexChar;
     getPriority(line);
