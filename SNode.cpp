@@ -17,17 +17,18 @@
 
 using namespace std;
 
-SNode::SNode(int k, int p) {
-    word = k;
+SNode::SNode(string word, int p) {
+    word = word;
     priority = p;
     next = NULL;
-    
-    
 }
 
-SNode::SNode(const SNode& orig) {
+SNode::~SNode(){
+	word = "";
+	priority = 1;
+	next = NULL;
 }
 
-SNode::~SNode() {
+void SNode::printNode(){
+	cout << this->word << ":" << this->priority << ", ";
 }
-
