@@ -14,15 +14,17 @@
 #include "SLL.hpp"
 #include "SNode.hpp"
 #include "WebTopic.hpp"
+
 #include <iostream>
 #include <stdlib.h>
 #include <cstring>
 using namespace std;
 
 int main() {
-    cout << "test" << endl;
-    WebTopic *x = new WebTopic("Dogs and Puppies.html"); //or another web page – I haven’t
+    cout << "test from main before ReadFile" << endl;
+    WebTopic *x = new WebTopic("webpage.html"); //or another web page – I haven’t
     //tested it extensively, but it should work for any basic html page
+    cout << "after constructor " << endl;
     x->ReadFile();
     x->printPage();
     return 0;

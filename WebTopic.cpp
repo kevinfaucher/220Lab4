@@ -43,19 +43,18 @@ void WebTopic::printPage() {
 			}
 			tmp = tmp->next;
 		}
-		cout << endl;
-		cout << endl;
-		delete[] tmp;
+		cout << endl << endl;
+                delete[] tmp;
 	}
 }
 void WebTopic::ReadFile() {
-    cout << "testing..." << endl;
+    cout << "testing...ReadFile" << endl;
     ifstream infile(file.c_str(), ios::in); // open file
     string line = "";
     char c;
     while (infile.get(c)) {
         if (c == '<') {
-            if (!line.empty()) {
+            if (!line.empty()  && isalpha(line[0])) {
                 parseString(line);
                 line = "";
             }

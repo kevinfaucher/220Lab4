@@ -19,8 +19,8 @@ using namespace std;
 
 SLL::SLL() {
     first = NULL;
-    last = p2->next;
-    p2 = first->next;
+    last = NULL;
+    p2 = NULL;
     size = 0;
 }
 
